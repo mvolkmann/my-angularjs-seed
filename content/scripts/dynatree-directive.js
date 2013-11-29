@@ -2,7 +2,7 @@
   'use strict';
   /*global angular: false */
 
-  var app = angular.module('Evolution');
+  var app = angular.module('MySeed');
 
   /**
    * This is an AngularJS directive that wraps a subset

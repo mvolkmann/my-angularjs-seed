@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var app = angular.module('Evolution');
+  var app = angular.module('MySeed');
 
   function getLocaleLang() {
     var localeLang = navigator.language || navigator.userLanguage;

@@ -2,7 +2,7 @@
 /*global angular: false, describe: false, expect: false, it: false */
 
 describe('main module', function () {
-  var module = angular.module('Evolution');
+  var module = angular.module('MySeed');
 
   it('exists', function () {
     expect(module).not.toBeNull();

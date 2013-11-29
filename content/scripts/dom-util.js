@@ -1,6 +1,6 @@
 /*global angular: false */
 (function () {
-  var app = angular.module('Evolution');
+  var app = angular.module('MySeed');
 
   app.factory('domUtil', function () {
     var svc = {};

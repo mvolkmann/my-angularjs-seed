@@ -1,6 +1,6 @@
 // This defines a set of custom AngularJS filters.
 (function () {
-  var app = angular.module('Evolution');
+  var app = angular.module('MySeed');
 
   /**
    * This is an AngularJS filter that replaces all colons in a string

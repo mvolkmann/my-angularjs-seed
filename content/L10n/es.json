@@ -1,11 +1,11 @@
 {
   "Email Password": "Correo electr\u00f3nico Contrase\u00f1a",
-  "Evolution": "Evoluci\u00f3n",
   "Help": "Ayudar",
   "Home": "Casa",
   "Login Help": "Login Ayudar",
   "Login": "Login",
   "Logout": "Logout",
+  "My AngularJS Seed": "Mi AngularJS Semilla",
   "Password": "Contrase\u00f1a",
   "Profile": "Perfil",
   "Reverse": "Inverso",
@@ -13,5 +13,6 @@
   "Text": "Texto",
   "Today is": "Hoy es",
   "User ID": "Identificaci\u00f3n del usuario",
-  "Welcome": "Bienvenida"
+  "Welcome": "Bienvenida",
+  "badUserIdOrPassword": "El ID de usuario o la contrase\u00f1a es incorrecta."
 }

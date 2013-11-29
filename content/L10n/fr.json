@@ -1,11 +1,11 @@
 {
   "Email Password": "Email Mot de Passe",
-  "Evolution": "\u00c9volution",
   "Help": "Aide",
   "Home": "Maison",
   "Login Help": "Connexion Aide",
   "Login": "S'identifer",
   "Logout": "D\u00e9connexion",
+  "My AngularJS Seed": "Mon AngularJS Semences",
   "Password": "Mot de Passe",
   "Profile": "Profil",
   "Reverse": "Inverse",
@@ -13,5 +13,6 @@
   "Text": "Texte",
   "Today is": "Aujourd'hui est",
   "User ID": "Identifiant de L'utilsatuer",
-  "Welcome": "Accueil"
+  "Welcome": "Accueil",
+  "badUserIdOrPassword": "Identifiant ou mot de passe est incorrect."
 }

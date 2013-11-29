@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var app = angular.module('Evolution');
+  var app = angular.module('MySeed');
 
   app.factory('loginSvc', ['$http', 'rest',
     function ($http, rest) {
@@ -33,8 +33,8 @@
   ]);
 
   app.controller('LoginCtrl', ['$scope', '$state', '$http',
-    'domUtil', 'httpUtil', 'loginSvc',
-    function ($scope, $state, $http, domUtil, httpUtil, loginSvc) {
+    'domUtil', 'httpUtil', 'loginSvc', 'translate',
+    function ($scope, $state, $http, domUtil, httpUtil, loginSvc, translate) {
       $scope.today = new Date(); // just for testing i18n
 
       $('#userId').focus();
@@ -92,7 +92,7 @@
             }
           },
           function (err) {
-            $scope.loginError = 'The user id or password is incorrect.';
+            $scope.loginError = translate('badUserIdOrPassword');
           });
       };
 

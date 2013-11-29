@@ -2,7 +2,7 @@
 (function () {
   'use strict';
 
-  var app = angular.module('Evolution');
+  var app = angular.module('MySeed');
 
   app.factory('homeSvc', ['$http', '$q', '$state', '$timeout', 'rest',
     function ($http, $q, $state, $timeout, rest) {
@@ -27,7 +27,7 @@
 
   app.controller('HomeCtrl', ['$scope', 'homeSvc',
     function ($scope, homeSvc) {
-      $scope.text = 'Biomerieux Evolution';
+      $scope.text = 'Biomerieux MySeed';
 
       $scope.reverseString = function () {
         homeSvc.reverseString($scope.text).then(

@@ -7,7 +7,7 @@ describe('loginSvc', function () {
   var restUrl = 'rest/login/password-hint?userId=mark';
   var $httpBackend;
 
-  beforeEach(module('Evolution'));
+  beforeEach(module('MySeed'));
 
   beforeEach(inject(function ($injector) {
     $httpBackend = $injector.get('$httpBackend');
