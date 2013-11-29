@@ -1,0 +1,40 @@
+<div id="profile-page" evolution-change-password>
+  <h3>{{"My Profile" | L10n}}</h3>
+
+  <p>
+   {{"Welcome" | L10n}}! {{"profile-welcome" | L10n}}
+  </p>
+  <p>
+    {{"save-changes" | L10n}}:
+    <button ng-click="save()">{{"Save" | L10n}}</button>
+  </p>
+
+  <div id="profile-tabs">
+    <ul class="nav nav-tabs">
+      <li><a href="#companyType" data-toggle="tab">
+        {{"Company Type" | L10n}}
+      </a></li>
+      <li class="active"><a href="#nameAddress" data-toggle="tab">
+        {{"Name" | L10n}}/{{"Address" | L10n}}
+      </a></li>
+      <li><a id="passwordTab" href="#password" data-toggle="tab">
+        {{"Password" | L10n}}
+      </a></li>
+      <li><a href="#email" data-toggle="tab">
+        {{"Email" | L10n}}
+      </a></li>
+      <li><a href="#company" data-toggle="tab">
+        {{"Company" | L10n}}
+      </a></li>
+    </ul>
+      
+    <div class="tab-content">
+      <div id="nameAddress" class="tab-pane active"
+        ng-include="'partials/profile/nameAddress.html'"></div>
+      <div id="password" class="tab-pane"
+        ng-include="'partials/profile/password.html'"></div>
+      <div id="email" class="tab-pane"
+        ng-include="'partials/profile/email.html'"></div>
+    </div>
+  </div>
+</div>

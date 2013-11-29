@@ -1,0 +1,43 @@
+<!-- include content/partials/doctype.html -->
+
+<!-- The id attribute below is only needed to make IE happy. -->
+<html id="ng-app" ng-app="Evolution">
+  <head>
+    <title>Evolution</title>
+
+    <!-- include content/partials/meta.html -->
+
+    <!-- build:css eP3.min.css -->
+    <!-- include content/partials/css.html -->
+    <link rel="stylesheet" href="styles/evolution.css"/>
+    <link rel="stylesheet" href="styles/home.css"/>
+    <link rel="stylesheet" href="styles/login.css"/>
+    <!-- If you add more stylesheets, make sure the
+         cssmin task in Gruntfile.js knows about them. -->
+    <!-- endbuild -->
+
+    <!-- include content/partials/shims.html -->
+
+    <!-- include content/partials/devTools.html -->
+
+    <!-- build:js eP3.min.js -->
+    <!-- include content/partials/scripts.html -->
+    <script src="scripts/state-select.js"></script> <!-- must precede main.js -->
+    <script src="scripts/main.js"></script> <!-- must precede others -->
+    <script src="scripts/home.js"></script>
+    <script src="scripts/http-util.js"></script>
+    <script src="scripts/states.js"></script>
+    <script src="scripts/L10n.js"></script>
+    <script src="scripts/dom-util.js"></script>
+    <script src="scripts/dynatree-directive.js"></script>
+    <script src="scripts/filters.js"></script>
+    <script src="scripts/login.js"></script>
+    <!-- If you add more scripts, make sure the
+         uglify task in Gruntfile.js knows about them. -->
+    <!-- endbuild -->
+  </head>
+  <body>
+    <div ng-include="'partials/header.html'"></div>
+    <div ui-view></div>
+  </body>
+</html>

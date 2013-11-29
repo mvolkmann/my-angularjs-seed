@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+.background-linear-gradient(@angle, @beginColor, @endColor) {
+  background-image: -moz-linear-gradient(@angle, @beginColor, @endColor);
+  background-image: -ms-linear-gradient(@angle, @beginColor, @endColor);
+  background-image: -o-linear-gradient(@angle, @beginColor, @endColor);
+  background-image: -webkit-linear-gradient(@angle, @beginColor, @endColor);
+  background-image: linear-gradient(@angle, @beginColor, @endColor);
+  background-color: @endColor; // for IE8
+}
+
+.evolution-page-header {
+  .background-linear-gradient(0deg, #336797, #1f3e5d);
+  color: white;
+  padding: 30px;
+  vertical-align: center;
+  width: 100%;
+
+  img {
+    height: 57px;
+    vertical-align: top;
+  }
+
+  #home-links {
+    display: inline-block;
+    margin: 20px;
+    position: absolute;
+    right: 0px;
+    top: 10px;
+
+    a { color: white; };
+    a:link { color: white; };
+    a:visited { color: white; };
+    a:hover { color: white; };
+  }
+
+  #logo {
+    margin-right: 40px;
+    vertical-align: top;
+  }
+
+  #welcome {
+    color: white;
+    display: inline-block;
+    margin-left: 40px;
+    vertical-align: 12px;
+  }
+
+  .page-title {
+    line-height: 57px;
+  }
+}
+
+.form-horizontal {
+  .control-group {
+    margin-bottom: 10px;
+  }
+}
+
+.page-title {
+  color: white;
+  font-size: 32pt;
+  //font-weight: bold;
+  line-height: 32pt;
+}
+
+.right-align {
+  text-align: right;
+}
+
+// This class is used by the Twitter Typeahead component.
+.tt-dropdown-menu {
+  background-color: white;
+  border: solid LightGray 1px;
+  border-radius: 8px;
+  box-shadow: 0 5px 10px, rgba(0, 0, 0, 0.2);
+  margin-top: 12px;
+  padding: 8px 0;
+}
+
+// This class is used by the Twitter Typeahead component.
+.tt-suggestion {
+  padding: 3px 20px;
+  p { margin: 0 }
+}
+
+a[ng-click] {
+  cursor: pointer;
+}
+
+body {
+  font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+label {
+  color: #528BA9; // overlay of #29527A and #FFD8B1
+  font-weight: bold;
+}

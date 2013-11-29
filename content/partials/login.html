@@ -1,0 +1,56 @@
+<div id="login-page">
+  <div id="login-area">
+    <form id="login-form" class="form-horizontal">
+      <div class="form-group">
+        <label class="col-sm-5 control-label" for="userId">
+          {{"User ID" | L10n}}
+        </label>
+        <div class="col-sm-4">
+          <input id="userId" class="form-control" type="text"
+            ng-model="userId">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="col-sm-5 control-label" for="password">
+          {{"Password" | L10n}}
+        </label>
+        <div class="col-sm-4">
+          <input id="password" class="form-control" type="password"
+            ng-model="password"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <div class="col-sm-offset-5 col-sm-4">
+          <button id="login" type="submit" class="btn btn-default"
+            ng-disabled="!userId || !password" ng-click="login($event)">
+            {{"Login" | L10n}}
+          </button>
+        </div>
+      </div>
+      <div id="loginError" class="text-error col-sm-offset-5"
+        ng-show="loginError">
+        {{loginError}}
+      </div>
+    </div>
+  </form>
+
+  <div id="login-help">
+    <a href="#" ui-sref="login-help">{{"Login Help" | L10n}}</a>
+    <a id="passwordHintLink" href="#" ng-click="emailPassword($event)">
+      {{"Email Password" | L10n}}
+    </a>
+  </div>
+
+  <div id="lang-img">
+    <img ng-src="images/login_{{lang}}.jpg"/>
+  </div>
+
+  <div id="lang-links">
+    <a ng-href="#/lang/en">English</a>
+    <a ng-href="#/lang/fr">Fran&#xe7;ais</a>
+    <a ng-href="#/lang/es">Espa&#xf1;ol</a>
+  </div>
+  <div id="lang-links">
+    Today is {{today | date}}. <!-- just for testing i18n -->
+  </div>
+</div>

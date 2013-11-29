@@ -1,0 +1,16 @@
+<div class="evolution-page-header" ng-controller="LoginCtrl">
+  <span class="page-title">{{"Evolution" | L10n}}</span>
+  <span id="welcome" class="welcome" ng-show="getLastName()">
+    {{"Welcome" | L10n}} {{getFirstName()}} {{getLastName()}}!
+  </span>
+  <div id="home-links" ng-show="getLastName()">
+    <i class="glyphicon glyphicon-home glyphicon-white"></i>
+    <a ng-click="goHome()">{{"Home" | L10n}}</a><br/>
+
+    <i class="glyphicon glyphicon-cog glyphicon-white"></i>
+    <a ui-sref="profile">{{"Profile" | L10n}}</a><br/>
+
+    <i class="glyphicon glyphicon-off glyphicon-white"></i>
+    <a ng-click="logout($event)">{{"Logout" | L10n}}</a>
+  </div>
+</div>

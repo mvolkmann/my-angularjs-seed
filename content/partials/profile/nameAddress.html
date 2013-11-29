@@ -1,0 +1,105 @@
+<form name="myForm" novalidate class="form-horizontal">
+  <div class="form-group">
+    <label class="col-sm-2 control-label">{{"First Name" | L10n}}</label>
+    <div class="col-sm-3">
+      <input class="form-control required" type="text"
+        ng-model="pax.firstName"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">{{"Middle Initial" | L10n}}</label>
+    <div class="col-sm-1">
+      <input class="form-control" type="text"
+        ng-model="pax.middleInitial"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">{{"Last Name" | L10n}}</label>
+    <div class="col-sm-3">
+      <input class="form-control required" type="text"
+        ng-model="pax.lastName"/>
+    </div>
+  </div>
+
+  <p>
+    {{"award-earnings" | L10n}}
+  </p>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">{{"Address Line" | L10n}} 1</label>
+    <div class="col-sm-3">
+      <input class="form-control required" type="text"
+        ng-model="pax.homeAddress.address1"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">{{"Address Line" | L10n}} 2</label>
+    <div class="col-sm-3">
+      <input class="form-control required" type="text"
+        ng-model="pax.homeAddress.address2"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">{{"City" | L10n}}</label>
+    <div class="col-sm-3">
+      <input class="form-control required" type="text"
+        ng-model="pax.homeAddress.city"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">{{"State" | L10n}}</label>
+    <div class="col-sm-2">
+      <state-select class="required" ng-model="pax.homeAddress.state">
+      </state-select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">{{"Postal Code" | L10n}}</label>
+    <div class="col-sm-2">
+      <input class="form-control required" type="text"
+        ng-model="pax.homeAddress.zip"/>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">{{"Phone" | L10n}}</label>
+    <div class="col-sm-2">
+      <input class="form-control required" type="text"
+        ng-model="pax.homePhone.phone"/>
+    </div>
+  </div>
+
+  <p>
+    {{"gmin-usage" | L10n}}
+  </p>
+
+  <div class="form-group">
+    <label class="col-sm-2 control-label">{{"GMIN" | L10n}}</label>
+    <div class="col-sm-2">
+      <input class="form-control required" type="text"
+        ng-model="pax.taxNum"/>
+    </div>
+  </div>
+
+  <p>
+    {{"Your SSN is not registered with your GMIN on" | L10n}}
+    <i>{{"GlobalConnect" | L10n}}</i>.
+  </p>
+
+  <p>
+    <b>For Dealership Employees only:</b>
+    {{"You will not be able to receive any earnPOWER points
+    until your SSN has been registered with GMIN on GlobalConnect.
+    To update earnPOWER with your current SSN status,
+    please click the link below.
+    You will remain on this page and an automatic update
+    will be made to the earnPOWER database." | L10n}}
+    <a href="">{{"Update current SSN status from GlobalConnect" | L10n}}</a>
+  </p>
+</form>

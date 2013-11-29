@@ -1,0 +1,25 @@
+<div id="home-page">
+  <form class="form-horizontal" role="form">
+    <div class="form-group">
+      <label for="text" class="col-sm-2 control-label">
+        {{"Text" | L10n}}
+      </label>
+      <div class="col-sm-9">
+        <input id="text" type="text" class="form-control" ng-model="text"/>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="reversed" class="col-sm-2 control-label">
+        {{"Reversed" | L10n}}
+      </label>
+      <div id="reversed" class="col-sm-9">{{reversed}}</div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-9">
+        <button class="btn btn-primary" ng-click="reverseString()">
+          {{"Reverse" | L10n}}
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

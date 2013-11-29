@@ -1,0 +1,61 @@
+<form name="myForm" novalidate class="form-horizontal">
+  <h4>{{"Please note" | L10n}}:</h4>
+  <ul>
+    <li>Email is the primary method of communication
+      for award programs and awards; therefore, please DO NOT choose
+      a group email address (one shared with another person).</li>
+    <li>You may have multiple email addresses in the system,
+      but you must indicate a preferred email.
+      Your preferred email is where program communications will be sent.</li>
+    <li>You many remove an email address from this list,
+      but any program file feeds processed through the system
+      may re-enter that same email address.</li>
+    <li>Your email will not be shared outside of this website.</li>
+  </ul>
+
+  <table id="emailTable">
+    <tr>
+      <th ng-show="pax.emails">{{"Preferred" | L10n}}</th>
+      <th>{{"Email Address" | L10n}}</th>
+      <th>{{"Action" | L10n}}</th>
+    </tr>
+    <tr ng-repeat="email in pax.emails">
+      <td class="preferredColumn">
+        <input type="radio" name="preferredEmail"
+          value="{{email.emailAddress}}"
+          ng-model="pax.preferredEmail"/>
+      </td>
+      <td class="addressColumn">{{email.emailAddress}}</td>
+      <td class="actionColumn">
+        <button class="btn btn-danger"
+          ng-click="removeEmail(email.emailAddress)">
+          {{"Remove" | L10n}}
+        </button>
+      </td>
+    </tr>
+    <tr>
+      <td class="preferredColumn" ng-show="pax.emails"></td>
+      <td class="addressColumn">
+        <input id="newEmailAddress" class="focus form-control" type="text"
+          ng-model="newEmailAddress"
+          ng-keydown="newEmailKeyDown($event)"/>
+      </td>
+      <td class="actionColumn">
+        <button class="btn btn-primary" ng-click="addEmail(newEmailAddress)">
+          {{"Add" | L10n}}
+        </button>
+      </td>
+    </tr>
+  </table>
+
+  <br/>
+
+  <label class="checkbox">
+    <input type="checkbox" ng-model="pax.unsubscribed"/>
+    {{"Unsubscribe from all emails" | L10n}}
+  </label>
+  <p>
+    {{"If you unsubscribe from emails, you will not receive
+    award earning or promotion notifications." | L10n}}
+  </p>
+</form>
