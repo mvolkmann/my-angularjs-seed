@@ -43,6 +43,7 @@ Here are some steps to get started:
 1. click the language links at the bottom (affects all pages)
 1. try an invalid user id or password
 1. open a new terminal window
-1. enter "grunt protractor" to run UI tests
+1. enter "grunt karma" to run unit tests
+1. enter "grunt protractor" to run end-to-end UI tests
    (may get a timeout the first time if you
    wait too long to accept incoming connections)
