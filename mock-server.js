@@ -12,6 +12,9 @@ var request = require('request');
 var qs = require('querystring');
 var app = express();
 
+// Serve static files from the content directory.
+app.use(express.static('content'));
+
 // This causes JSON response bodies to automatically be parsed
 // into JavaScript objects so the value of res.body will be
 // a JavaScript object instead of a string of JSON.
@@ -27,7 +30,10 @@ app.get('/reverse/:text', function (req, res) {
 
 // This is a mock version of the authenticate REST service.
 app.post('/rest/user/authenticate', function (req, res, next) {
-  if (req.body.username === 'demouser') {
+  var username = req.body.username;
+  var password = req.body.password;
+
+  if (username === 'demouser' && password === 'password') {
     var user = {
       firstName: 'Eric',
       lastName: 'Nelson'
@@ -35,7 +41,12 @@ app.post('/rest/user/authenticate', function (req, res, next) {
     res.contentType('application/json');
     res.send(JSON.stringify(user));
   } else {
-    next();
+    // Use the next line to forward the request to the Tomcat server
+    // so it can authenticate other users.
+    //next();
+ 
+    // Remove the next line if the Tomcat serve is handling authentication.
+    res.status(401).send();
   }
 });
 
@@ -86,6 +97,6 @@ app.all('*', function (req, res) {
   request(options, handler).pipe(res);
 });
 
-var PORT = 3019;
+var PORT = 3000; //3019;
 app.listen(PORT);
 console.log('listening on', PORT);

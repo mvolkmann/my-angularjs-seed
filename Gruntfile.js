@@ -19,6 +19,8 @@ module.exports = function (grunt) {
         'content/index.html'
       ]
     },
+    /* This can be used to server static files,
+     * but mock-server.js also does that.
     connect: {
       server: {
         options: {
@@ -27,6 +29,7 @@ module.exports = function (grunt) {
         }
       }
     },
+    */
     csslint: { // validates CSS files
       strict: {
         options: {
@@ -213,7 +216,8 @@ module.exports = function (grunt) {
     'jshint'
   ]);
 
-  grunt.registerTask('default', ['build', 'mock-server', 'connect', 'watch']);
+  //grunt.registerTask('default', ['build', 'mock-server', 'connect', 'watch']);
+  grunt.registerTask('default', ['build', 'mock-server', 'watch']);
 
   // To use minimized version, browse localhost/index.min.html
   grunt.registerTask('min', [

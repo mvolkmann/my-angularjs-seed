@@ -40,8 +40,8 @@ exports.config = {
   //
   // Spec patterns are relative to the location of this config.
   specs: [
-    'content/common/test/e2e/protractorSugar.js',
-    'content/common/test/e2e/*Spec.js'
+    'content/test/e2e/protractorSugar.js',
+    'content/test/e2e/*Spec.js'
   ],
 
   // ----- Capabilities to be passed to the webdriver instance ----
@@ -63,7 +63,7 @@ exports.config = {
 
   // A base URL for your application under test. Calls to protractor.get()
   // with relative paths will be prepended with this.
-  baseUrl: 'http://localhost:81/gm-ep/common/',
+  baseUrl: 'http://localhost:3000/',
 
   // Selector for the element housing the angular app - this defaults to
   // body, but is necessary if ng-app is on a descendant of <body>  
@@ -91,6 +91,6 @@ exports.config = {
     // If true, include stack traces in failures.
     includeStackTrace: true,
     // Default time to wait in ms before a test fails.
-    defaultTimeoutInterval: 30000
+    defaultTimeoutInterval: 10000
   }
 };
