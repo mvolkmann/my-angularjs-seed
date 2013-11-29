@@ -30,6 +30,7 @@ It automates many tasks using Grunt.  These include:
     when they do; reloads the web browser when files change for quick UI feedback
 
 Here are some steps to get started:
+
 1. clone this Git repo
 2. install Node.js
 3. enter "npm install"
