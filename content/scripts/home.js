@@ -21,11 +21,13 @@
     }
   ]);
 
-  app.controller('HomeCtrl', ['$scope', 'homeSvc', function ($scope, homeSvc) {
-    $scope.text = 'Biomerieux Evolution';
+  app.controller('HomeCtrl', ['$scope', 'homeSvc',
+    function ($scope, homeSvc) {
+      $scope.text = 'Biomerieux Evolution';
 
-    $scope.reverseString = function () {
-      $scope.reversed = homeSvc.reverseString($scope.text);
-    };
-  }]);
+      $scope.reverseString = function () {
+        $scope.reversed = homeSvc.reverseString($scope.text);
+      };
+    }
+  ]);
 })();

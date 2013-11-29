@@ -85,7 +85,9 @@
                 changePassword ? 'true' : '';
               var to = changePassword ? 'profile' : 'home';
               var toParams = {};
-              var options = {inherit: false}; // don't retain query parameters
+              var options = {
+                inherit: false
+              }; // don't retain query parameters
               $state.go(to, toParams, options);
             }
           },

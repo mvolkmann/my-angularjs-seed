@@ -64,6 +64,7 @@ app.all('*', function (req, res) {
 
   // Send the request to the Tomcat server
   // and send the results to the response object.
+
   function handler(err, otherRes, body) {
     if (err) {
       var msg = err.code === 'ECONNREFUSED' ?

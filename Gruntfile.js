@@ -124,18 +124,24 @@ module.exports = function (grunt) {
     */
     shell: {
       genIndex: {
-        options: {stdout: true},
+        options: {
+          stdout: true
+        },
         command: 'node tasks/genIndex index-in.html'
       },
       protractor: {
         // Runs Protractor tests.
-        options: {stdout: true},
+        options: {
+          stdout: true
+        },
         command: 'protractor protractor.conf.js'
       },
       tomcat: {
         // starts local Tomcat server in another process,
         // allowing Grunt to exit
-        options: {stdout: true},
+        options: {
+          stdout: true
+        },
         command: 'mvn tomcat7:run'
       }
     },
@@ -169,7 +175,9 @@ module.exports = function (grunt) {
     },
     watch: {
       // watches certain files and runs specified tasks when they are modified
-      options: {livereload: true},
+      options: {
+        livereload: true
+      },
       css: {
         files: ['build/styles/*.css'],
         tasks: ['csslint']
@@ -233,7 +241,9 @@ module.exports = function (grunt) {
     grunt.util.spawn({
       cmd: 'node',
       args: ['mock-server.js'],
-      opts: {stdio: 'inherit'}
+      opts: {
+        stdio: 'inherit'
+      }
     });
   });
 
