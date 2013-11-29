@@ -44,7 +44,7 @@ app.post('/rest/user/authenticate', function (req, res, next) {
     // Use the next line to forward the request to the Tomcat server
     // so it can authenticate other users.
     //next();
- 
+
     // Remove the next line if the Tomcat serve is handling authentication.
     res.status(401).send();
   }
