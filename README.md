@@ -34,11 +34,15 @@ Here are some steps to get started:
 1. clone this Git repo
 1. cd my-angular-seed
 1. install Node.js if not already installed
-1. enter "npm install"
+1. enter "npm install" (takes a couple of minutes)
 1. enter "grunt" to start a local server
 1. browse "http://localhost:3000"
 1. login with demouser/password
 1. enter text and press the "Reverse" button
-1. click the "Logout" link
-1. click the language links at the bottom
+1. click the "Logout" link in the upper-right corner
+1. click the language links at the bottom (affects all pages)
+1. try an invalid user id or password
+1. open a new terminal window
 1. enter "grunt protractor" to run UI tests
+   (may get a timeout the first time if you
+    wait too long to give permission to connect)
