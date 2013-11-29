@@ -30,13 +30,13 @@ It automates many tasks using Grunt.  These include:
     when they do; reloads the web browser when files change for quick UI feedback
 
 Here are some steps to get started:
-1) clone this Git repo
-2) install Node.js
-3) enter "npm install"
-4) enter "grunt" to start a local server
-5) browse "http://localhost:3000"
-6) login with demouser/password
-7) enter text and press the "Reverse" button
-8) click the "Logout" link
-9) click the language links at the bottom
-10) enter "grunt protractor" to run UI tests
+1. clone this Git repo
+2. install Node.js
+3. enter "npm install"
+4. enter "grunt" to start a local server
+5. browse "http://localhost:3000"
+6. login with demouser/password
+7. enter text and press the "Reverse" button
+8. click the "Logout" link
+9. click the language links at the bottom
+10. enter "grunt protractor" to run UI tests
