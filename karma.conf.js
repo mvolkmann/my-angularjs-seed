@@ -12,18 +12,18 @@ module.exports = function (config) {
 
     // list of files / patterns to load in the browser
     files: [
-      'content/common/lib/angularjs-1.2.0rc3/angular.min.js',
-      'content/common/lib/angularjs-1.2.0rc3/angular-mocks.js',
-      'content/common/lib/angularjs-1.2.0rc3/angular-route.min.js',
-      'content/common/lib/tmhDynamicLocale.js',
-      'content/common/lib/jasmine.async.min.js',
-      'content/common/lib/jquery-1.10.1.min.js',
-      'content/common/lib/lodash.min.js',
-      'content/common/lib/quirksmode-browser-detect.js',
-      'content/common/scripts/main.js', // load before other files in dir
-      'content/common/scripts/state-select.js', // ditto
-      'content/common/scripts/*.js',
-      'content/common/test/unit/**/*Spec.js'
+      'content/lib/angularjs-1.2.2/angular.js',
+      'content/lib/angularjs-1.2.2/angular-mocks.js',
+      'content/lib/angular-ui-router.js',
+      'content/lib/tmhDynamicLocale.js',
+      'content/lib/jasmine.async.min.js',
+      'content/lib/jquery-1.10.1.min.js',
+      'content/lib/lodash.min.js',
+      'content/lib/quirksmode-browser-detect.js',
+      'content/scripts/main.js', // load before other files in dir
+      'content/scripts/state-select.js', // ditto
+      'content/scripts/*.js',
+      'content/test/unit/**/*Spec.js'
     ],
 
     // list of files to exclude
@@ -44,6 +44,7 @@ module.exports = function (config) {
     // possible values: config.LOG_DISABLE, config.LOG_ERROR,
     //   config.LOG_WARN, config.LOG_INFO, config.LOG_DEBUG
     logLevel: config.LOG_INFO,
+    //logLevel: config.LOG_DEBUG,
 
     // enable/disable watching files and executing tests when any file changes
     autoWatch: false,
@@ -57,7 +58,7 @@ module.exports = function (config) {
     // - PhantomJS
     // - IE (only Windows)
     //browsers: ['Chrome', 'Firefox', 'IE', 'PhantomJS'],
-    browsers: ['PhantomJS'],
+    browsers: ['PhantomJS'], // may get better stack traces with another browser
 
     // If browser does not capture in given timeout [ms], kill it
     captureTimeout: 30000,

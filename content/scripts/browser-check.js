@@ -3,11 +3,13 @@
   var version = BrowserDetect.version;
   var os = BrowserDetect.OS;
   //console.log('You are running', browser, version, 'on', os);
+  if (/PhantomJS/.test(navigator.userAgent)) browser = 'PhantomJS';
 
   // TODO: Update the list of supported browsers to include mobile browsers.
   var supported =
     browser === 'Chrome' ||
     browser === 'Firefox' ||
+    browser === 'PhantomJS' ||
     (browser === 'Explorer' && version >= 9);
   if (supported) return;
 

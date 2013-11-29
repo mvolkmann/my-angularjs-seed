@@ -10,8 +10,8 @@ describe('main module', function () {
 
   it('has correct dependencies', function () {
     expect(module.requires.length).toBe(3);
-    expect(module.requires).toContain('ngRoute');
     expect(module.requires).toContain('CustomDirectives');
     expect(module.requires).toContain('tmh.dynamicLocale');
+    expect(module.requires).toContain('ui.router');
   });
 });

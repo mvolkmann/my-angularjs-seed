@@ -8,7 +8,7 @@
     function ($http, $q, $state, $timeout, rest) {
       var svc = {};
 
-      svc.reverseString = function (text) {
+      svc.reverseString = function (text) { // returns a promise
         /*
         // Simulate asynchronous operation and return a promise.
         var dfr = $q.defer();
