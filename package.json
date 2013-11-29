@@ -1,11 +1,9 @@
 {
-  "name": "gm-earnpower-client",
+  "name": "my-angularjs-seed",
   "version": "0.0.0",
-  "description": "",
+  "description": "This is a seed project for building AngularJS applications.",
   "main": "Gruntfile.js",
-  "directories": {
-    "doc": "doc"
-  },
+  "directories": {},
   "dependencies": {},
   "devDependencies": {
     "express": "~3.4.4",
@@ -29,12 +27,12 @@
     "protractor": "~0.13.0"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node mock-server.js; protractor protractor.conf.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@fenlxmmwaps01:gm-earnpower-client"
+    "url": "https://github.com/mvolkmann/my-angularjs-seed.git"
   },
-  "author": "",
+  "author": "R. Mark Volkmann",
   "license": "MIT"
 }

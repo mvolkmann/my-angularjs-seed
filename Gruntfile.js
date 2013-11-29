@@ -43,10 +43,10 @@ module.exports = function (grunt) {
         src: ['build/styles/*.css']
       }
     },
-    cssmin: { // creates content/eP3.min.css from required CSS files
+    cssmin: { // creates content/seed.min.css from required CSS files
       all: {
         files: {
-          'build/evolution.min.css': [
+          'build/seed.min.css': [
             // files below must match link tags in content/index.html
             'build/lib/bootstrap/bootstrap.css',
             'build/lib/bootstrap/bootstrap-responsive.css',
@@ -126,12 +126,6 @@ module.exports = function (grunt) {
     },
     */
     shell: {
-      genIndex: {
-        options: {
-          stdout: true
-        },
-        command: 'node tasks/genIndex index-in.html'
-      },
       protractor: {
         // Runs Protractor tests.
         options: {
@@ -148,10 +142,10 @@ module.exports = function (grunt) {
         command: 'mvn tomcat7:run'
       }
     },
-    uglify: { // creates content/eP3.min.js from required JavaScript files
+    uglify: { // creates content/seed.min.js from required JavaScript files
       all: {
         files: {
-          'build/eP3.min.js': [
+          'build/seed.min.js': [
             // files below must match script tags in content/index.html
             'build/lib/quirksmode-browser-detect.js',
             'build/lib/jquery-1.10.1.min.js',
@@ -220,9 +214,7 @@ module.exports = function (grunt) {
   grunt.registerTask('default', ['build', 'mock-server', 'watch']);
 
   // To use minimized version, browse localhost/index.min.html
-  grunt.registerTask('min', [
-    'copy:usemin', 'less', 'cssmin', 'uglify', 'usemin'
-  ]);
+  grunt.registerTask('min', ['less', 'cssmin', 'uglify', 'usemin']);
 
   var desc =
     'creates index.html from index-in.html by replacing include comments';
