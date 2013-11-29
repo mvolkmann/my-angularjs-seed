@@ -45,4 +45,4 @@ Here are some steps to get started:
 1. open a new terminal window
 1. enter "grunt protractor" to run UI tests
    (may get a timeout the first time if you
-    wait too long to give permission to connect)
+   wait too long to accept incoming connections)
