@@ -10,11 +10,15 @@
 
       svc.reverseString = function (text) {
         /*
-        var url = rest.getRestUrlPrefix() +
-          'reverse?text=' + text;
-        return $http.get(url);
+        // Simulate asynchronous operation and return a promise.
+        var dfr = $q.defer();
+        setTimeout(function () {
+          var reverse = text.split('').reverse().join('');
+          dfr.resolve({data: reverse});
+        }, 100);
+        return dfr.promise;
         */
-        return text.split('').reverse().join('');
+        return $http.get('/reverse/' + text);
       };
 
       return svc;
@@ -26,7 +30,14 @@
       $scope.text = 'Biomerieux Evolution';
 
       $scope.reverseString = function () {
-        $scope.reversed = homeSvc.reverseString($scope.text);
+        homeSvc.reverseString($scope.text).then(
+          function (res) {
+            $scope.reversed = res.data;
+          },
+          function (err) {
+            alert(err);
+          }
+        );
       };
     }
   ]);

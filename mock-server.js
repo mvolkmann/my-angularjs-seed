@@ -12,10 +12,21 @@ var request = require('request');
 var qs = require('querystring');
 var app = express();
 
+// This causes JSON response bodies to automatically be parsed
+// into JavaScript objects so the value of res.body will be
+// a JavaScript object instead of a string of JSON.
 app.use(express.bodyParser());
 
+// This demonstrates implementating a simple REST service
+// in Node.js using Express.
+app.get('/reverse/:text', function (req, res) {
+  var text = req.params.text;
+  var reverse = text.split('').reverse().join('');
+  res.send(reverse);
+});
+
+// This is a mock version of the authenticate REST service.
 app.post('/rest/user/authenticate', function (req, res, next) {
-  console.log('in mock authenticate');
   if (req.body.username === 'demouser') {
     var user = {
       firstName: 'Eric',
