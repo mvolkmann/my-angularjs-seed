@@ -1,4 +1,4 @@
-My AngularJS Seed
+# My AngularJS Seed
 
 This is a Web application that provides a good starting point for
 building new Web applications that use AngularJS and Twitter Bootstrap.
