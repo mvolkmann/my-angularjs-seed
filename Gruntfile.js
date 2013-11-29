@@ -241,6 +241,8 @@ module.exports = function (grunt) {
     });
   });
 
+  // This starts a Node.js server that serves static content
+  // and runs REST services implemented in Node.js.
   grunt.registerTask('mock-server', function () {
     grunt.util.spawn({
       cmd: 'node',
@@ -251,6 +253,11 @@ module.exports = function (grunt) {
     });
   });
 
+  // This runs all the Protractor tests.
+  // If you get "Error: listen EADDRINUSE when running this,
+  // try killing all running "node" processes and running this again.
   grunt.registerTask('protractor', ['mock-server', 'shell:protractor']);
+
+  // This starts the Tomcat server.
   grunt.registerTask('server', ['build', 'shell:tomcat']);
 };
