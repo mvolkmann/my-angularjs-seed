@@ -24,7 +24,8 @@
     "grunt-usemin": "~0.1.12",
     "matchdep": "~0.3.0",
     "lodash": "~2.4.0",
-    "protractor": "~0.13.0"
+    "protractor": "~0.13.0",
+    "request": "~2.27.0"
   },
   "scripts": {
     "test": "node mock-server.js; protractor protractor.conf.js"
