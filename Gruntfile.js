@@ -30,6 +30,16 @@ module.exports = function (grunt) {
       }
     },
     */
+    copy: {
+      usemin: {
+        files: [
+          {
+            src: 'index.html',
+            dest: 'index.min.html'
+          }
+        ]
+      }
+    },
     csslint: { // validates CSS files
       strict: {
         options: {

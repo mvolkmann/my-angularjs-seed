@@ -36,6 +36,7 @@ Here are some steps to get started:
 1. install Node.js if not already installed
 1. enter "npm install" (takes a couple of minutes)
 1. enter "npm install -g grunt-cli"
+1. enter "npm install -g protractor"
 1. enter "grunt" to start a local server
 1. browse "http://localhost:3000"
 1. login with demouser/password
