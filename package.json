@@ -2,6 +2,7 @@
   "name": "my-angularjs-seed",
   "version": "0.0.0",
   "description": "This is a seed project for building AngularJS applications.",
+  "engines": { "node": "~> 0.10.22" },
   "main": "Gruntfile.js",
   "directories": {},
   "dependencies": {},
