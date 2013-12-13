@@ -35,8 +35,8 @@ app.post('/rest/user/authenticate', function (req, res, next) {
 
   if (username === 'demouser' && password === 'password') {
     var user = {
-      firstName: 'Eric',
-      lastName: 'Nelson'
+      firstName: 'Mark',
+      lastName: 'Volkmann'
     };
     res.contentType('application/json');
     res.send(JSON.stringify(user));

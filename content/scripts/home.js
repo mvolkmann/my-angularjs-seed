@@ -27,7 +27,7 @@
 
   app.controller('HomeCtrl', ['$scope', 'homeSvc',
     function ($scope, homeSvc) {
-      $scope.text = 'Biomerieux MySeed';
+      $scope.text = 'My Seed';
 
       $scope.reverseString = function () {
         homeSvc.reverseString($scope.text).then(

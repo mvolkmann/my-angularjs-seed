@@ -126,7 +126,6 @@
         $scope.password = password;
         return $scope.login();
       } else {
-        //$scope.userId = 'tid:000000'; // for testing
         $scope.userId = 'demouser'; // for testing
         $scope.password = 'password'; // for testing
       }
