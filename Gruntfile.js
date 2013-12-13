@@ -142,14 +142,6 @@ module.exports = function (grunt) {
           stdout: true
         },
         command: 'protractor protractor.conf.js'
-      },
-      tomcat: {
-        // starts local Tomcat server in another process,
-        // allowing Grunt to exit
-        options: {
-          stdout: true
-        },
-        command: 'mvn tomcat7:run'
       }
     },
     uglify: { // creates content/seed.min.js from required JavaScript files
@@ -262,7 +254,4 @@ module.exports = function (grunt) {
   // If you start mock-server and protractor from the same Grunt command,
   // it will fail to stop one of the node processes when it completes!
   grunt.registerTask('protractor', ['shell:protractor']);
-
-  // This starts the Tomcat server.
-  grunt.registerTask('server', ['build', 'shell:tomcat']);
 };

@@ -136,7 +136,7 @@ See <http://jshint.com>.
 The checks it performs can be customized through a configuration file
 that is typically stored in the user home directory named .jshintrc.
 It can also be configured on a per-file basis with `/*jshint ... */` comments.
-The eP3 client git repo contains the file "jshintrc" in the top directory
+The git repo contains the file "jshintrc" in the top directory
 that is being used by that project.
 
 ## Karma

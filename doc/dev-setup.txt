@@ -1,18 +1,10 @@
-Setup Steps for New eP3 Developers
+Setup Steps
 
 Install git
 - browse http://git-scm.com
 - press "Download for Window" button
 - double-click downloaded .exe file
 - accept all defaults
-
-Clone eP3 client git repository
-- work with Bryan Bess to generate an SSH key
-  and get access to this repository
-- open Command Prompt (one way is to open Windows Start menu
-  and enter "cmd" into input field for "Search programs and files")
-- cd to directory where local repository is desired
-- git clone git@fenlxmmwaps01:gm-earnpower-client
 
 Tool documentation
 - see file TOOLS.md in doc directory.  .md can be viewed by any editor.
@@ -24,22 +16,6 @@ Install Java
 
 Install Artifactory Cert into the Java Keychain
 - ask for an email containing the cert and instructions
-
-Install Maven
-- browse http://mpd15-21.maritzdev.com/gm-portal/
-- click link "apache-maven-3.1.0-bin.zip"
-- right-click downloaded .exe file and select "Extract All..."
-- remove "\apache-maven-3.1.0-bin from end of recommended destination
-  and press the "Extract" button
-- optionally move apache-maven-3.1.0 directory to another directory
-- add bin directory inside this directory to
-  PATH environment variable (may require admin rights)
-  * can create a MVN_HOME environment variable
-    that points to this directory and
-    add ";%MVN_HOME%\bin" to end of PATH environment variable
-- Add Artifactory configuration to the conf/settings.xml file.  See examples from
-  other team members or visit https://components-build.maritz.com/artifactory/webapp/mavensettings.html
-  to generate the settings needed for artifactory.  Insert these settings into your settings.xml file.
 
 Install Node.js
 - browse http://nodejs.org
@@ -69,16 +45,9 @@ Watch files for changes, running appropriate tasks when they do
 - grunt watch (or just grunt since default task runs watch)
 
 Start local server
-- mvn tomcat6:run
+- grunt mock-server
   or
-  grunt server
+  just grunt to run mock-server and watch
 
 Run web app
 - browse localhost
-
-To switch between using MS SQL database and an in-memory database
-- edit src/main/resources/spring/datasource-config.xml
-- in the bean element with id = "dataSource",
-  change the ref value for defaultTargetDataSource
-  from "msSqlDataSource" to "inMemoryDataSource"
-  (Does GM value also need to be changed to "inMemoryDataSource"?)
